@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", ui-serif, Georgia, serif;
+
+  --color-coffee-50: #f7f1ec;
+  --color-coffee-100: #ecdccb;
+  --color-coffee-200: #d9bd9f;
+  --color-coffee-300: #c19a71;
+  --color-coffee-400: #a97a50;
+  --color-coffee-500: #8a5a37;
+  --color-coffee-600: #6b4228;
+  --color-coffee-700: #4e2f1e;
+  --color-coffee-800: #3a2216;
+  --color-coffee-900: #26160e;
+  --color-coffee-950: #180d08;
+
+  --color-cream-50: #fffdfa;
+  --color-cream-100: #fff8ed;
+  --color-cream-200: #fbefd9;
+  --color-cream-300: #f6e3c1;
+
+  --color-beige-100: #f3e6d3;
+  --color-beige-200: #ead9bd;
+  --color-beige-300: #ddc49b;
+
+  --color-cherry-300: #f0919e;
+  --color-cherry-400: #e14a5e;
+  --color-cherry-500: #c8102e;
+  --color-cherry-600: #a30d26;
+  --color-cherry-700: #7f0a1e;
+
+  --shadow-soft: 0 10px 30px -10px rgba(38, 22, 14, 0.18);
+  --shadow-lift: 0 20px 45px -15px rgba(38, 22, 14, 0.28);
+
+  --animate-loop-spin: loop-spin 12s linear infinite;
+  --animate-float: float 4s ease-in-out infinite;
+  --animate-marquee: marquee 30s linear infinite;
+}
+
+@keyframes loop-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-cream-100);
+  color: var(--color-coffee-900);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-cherry-500);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream-100);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-coffee-300);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-coffee-400);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.text-gradient {
+  background: linear-gradient(120deg, var(--color-coffee-700), var(--color-cherry-500));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  background: rgba(255, 248, 237, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.glass-dark {
+  background: rgba(38, 22, 14, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
