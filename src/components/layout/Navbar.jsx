@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { NavLink } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, ShoppingBag, ShoppingCart } from "lucide-react";
@@ -29,6 +30,7 @@ export default function Navbar() {
   }, [open]);
 
   return (
+    <>
     <header
       className={`fixed top-0 inset-x-0 z-50 bg-[#570219]/95 backdrop-blur-md transition-all duration-300 ${
         scrolled ? "shadow-soft py-2" : "py-4"
@@ -84,7 +86,9 @@ export default function Navbar() {
           </button>
         </div>
       </Container>
+    </header>
 
+    {createPortal(
       <AnimatePresence>
         {open && (
           <motion.div
@@ -99,7 +103,7 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "tween", duration: 0.3 }}
-              className="absolute right-0 top-0 h-full w-[80%] max-w-sm bg-cream-50 shadow-lift flex flex-col p-6"
+              className="fixed right-0 top-0 h-full w-[80%] max-w-sm bg-cream-50 shadow-lift flex flex-col p-6"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between mb-8">
@@ -140,8 +144,10 @@ export default function Navbar() {
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
-    </header>
+      </AnimatePresence>,
+      document.body
+    )}
+    </>
   );
 }
 
