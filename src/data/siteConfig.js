@@ -4,7 +4,7 @@ export const siteConfig = {
   description:
     "Yumloop is a premium café serving soups, salads, starters, momos, burgers, fried chicken, sandwiches, pizza, Korean noodles, main course, pasta, moktails, shakes, desserts, falooda, bubble tea, smoothies and fresh juice.",
   phone: "+91 79024 62999",
-  phoneSecondary: "+91 85903 45791",
+  phoneSecondary: "+91 80190 14299",
   whatsapp: "917902462999",
   email: "yumloop999@gmail.com",
   address: "HYD Road, Near Vivekananda Statue, Nalgonda - 508001",
