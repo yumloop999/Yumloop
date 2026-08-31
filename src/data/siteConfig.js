@@ -11,10 +11,7 @@ export const siteConfig = {
   mapEmbedSrc:
     "https://maps.google.com/maps?q=Yum+Loop%2C+HYD+Road%2C+Near+Vivekananda+Statue%2C+Nalgonda+-+508001&t=&z=16&ie=UTF8&iwloc=&output=embed",
   mapLink: "https://maps.app.goo.gl/31Z6f61GaegErZSB9?g_st=ic",
-  hours: [
-    { day: "Monday - Friday", time: "8:00 AM - 11:00 PM" },
-    { day: "Saturday - Sunday", time: "8:00 AM - 12:00 AM" },
-  ],
+  hours: [{ day: "Monday - Sunday", time: "11:00 AM - 11:00 PM" }],
   serviceOptions: ["Dine In", "Takeaway", "Delivery"],
   policyNotes: [
     "Once an order is placed, cancellation is not available.",
